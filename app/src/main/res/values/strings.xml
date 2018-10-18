@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ExercisingTracker</string>
+    <string name="dumbbell">"Dumbbell Exercises</string>
 </resources>
