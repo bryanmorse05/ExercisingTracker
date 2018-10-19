@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.Dumbbell_Exercises_Activity"
+        <activity
+            android:name=".activities.Dumbbell_Activity"
+            android:parentActivityName=".activities.Home_Activity"></activity>
+        <activity android:name=".activities.Abdominal_Activity"
             android:parentActivityName=".activities.Home_Activity">
 
         </activity>

@@ -10,7 +10,7 @@ import com.rainy.bryan.exercisingtracker.R;
 
 public class Home_Activity extends AppCompatActivity {
 
-    Button dumbbellButton;
+    Button dumbbellButton, abdominalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +18,20 @@ public class Home_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         dumbbellButton = findViewById(R.id.dumbbellButton);
+        abdominalButton = findViewById(R.id.abdominalButton);
 
         dumbbellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Dumbbell_Exercises_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Dumbbell_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        abdominalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Abdominal_Activity.class);
                 startActivity(intent);
             }
         });

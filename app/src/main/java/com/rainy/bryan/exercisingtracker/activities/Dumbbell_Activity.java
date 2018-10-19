@@ -12,7 +12,7 @@ import com.rainy.bryan.exercisingtracker.models.Exercise_Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dumbbell_Exercises_Activity extends AppCompatActivity {
+public class Dumbbell_Activity extends AppCompatActivity {
 
     private List<Exercise_Model> exercise_modelList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -26,7 +26,7 @@ public class Dumbbell_Exercises_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dumbbell_exercises_);
+        setContentView(R.layout.activity_dumbbell_);
 
         //Back button enabled
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
