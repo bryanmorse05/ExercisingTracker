@@ -27,10 +27,10 @@ public class Exercise_Model_Recycler_Adapter extends RecyclerView.Adapter<Exerci
         public MyViewHolder(View view) {
             super(view);
 
-            dName = view.findViewById(R.id.dumbbellName);
-            dHow = view.findViewById(R.id.dumbbellHow);
-            dWhy = view.findViewById(R.id.dumbbellWhy);
-            dGif = view.findViewById(R.id.dumbbellGif);
+            dName = view.findViewById(R.id.exerciseName);
+            dHow = view.findViewById(R.id.exerciseHow);
+            dWhy = view.findViewById(R.id.exerciseWhy);
+            dGif = view.findViewById(R.id.exerciseGif);
         }
     }
 
