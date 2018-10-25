@@ -1,18 +1,18 @@
 package com.rainy.bryan.exercisingtracker.models;
 
-public class Exercise_Model {
+public class Exercise_Model_Video {
 
     String name;
     String howDescription;
     String whyDescription;
-    Integer exampleGif;
+    String videoURL;
 
-    public Integer getExampleGif() {
-        return exampleGif;
+    public String getVideoURL() {
+        return videoURL;
     }
 
-    public void setExampleGif(Integer exampleGif) {
-        this.exampleGif = exampleGif;
+    public void setVideoURL(String videoURL) {
+        this.videoURL = videoURL;
     }
 
     public String getName() {
@@ -39,11 +39,10 @@ public class Exercise_Model {
         this.whyDescription = whyDescription;
     }
 
-    public Exercise_Model(String name, String how, String why, Integer gif) {
+    public Exercise_Model_Video(String name, String how, String why, String url) {
         this.name = name;
         this.howDescription = how;
         this.whyDescription = why;
-        this.exampleGif = gif;
+        this.videoURL = url;
     }
-
 }

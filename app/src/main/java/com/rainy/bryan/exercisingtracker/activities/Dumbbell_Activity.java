@@ -19,9 +19,9 @@ public class Dumbbell_Activity extends AppCompatActivity {
     private Exercise_Model_Recycler_Adapter mAdapter;
 
     String gobletSquatHow, dumbbellCleanHow, farmersWalkHow, bentOverRowHow, twoArmDumbbellStiffLeggedDeadliftHow;
-    String oneArmSwingHow, benchPressHow, crossBodyHammerCurlHow, stepUpsHow, dumbbellScaptionHow;
+    String oneArmSwingHow, benchPressHow, crossBodyHammerCurlHow, stepUpsHow, dumbbellScaptionHow, overheadTricepExtensionHow;
     String gobletSquatWhy, dumbbellCleanWhy, farmersWalkWhy, bentOverRowWhy, twoArmDumbbellStiffLeggedDeadliftWhy;
-    String oneArmSwingWhy, benchPressWhy, crossBodyHammerCurlWhy, stepUpsWhy, dumbbellScaptionWhy;
+    String oneArmSwingWhy, benchPressWhy, crossBodyHammerCurlWhy, stepUpsWhy, dumbbellScaptionWhy, overheadTricepExtensionWhy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,10 @@ public class Dumbbell_Activity extends AppCompatActivity {
 
         //Taken from here:
         //http://www.menshealth.co.uk/building-muscle/the-10-best-dumbbell-exercises
+
+        //Cable exercises:
+        //https://www.bodybuilding.com/exercises/equipment/cable
+
         gobletSquatHow = "Stand with feet set wider than shoulder-width and hold a " +
                         "dumbbell with both hands in front of your chest. Sit back into a " +
                         "squat, then drive back up and repeat.";
@@ -117,6 +121,12 @@ public class Dumbbell_Activity extends AppCompatActivity {
         dumbbellScaptionWhy = "Rotator cuff, shoulder impingement and tears are common issues " +
                 "from overuse exercises, but not if you use the scaption. By targeting your " +
                 "stabilising muscles it protects the shoulder joint and ligaments surrounding it.";
+        overheadTricepExtensionHow = "Grab a pair of dumbbells, and kneel on the floor with your knees shoulder-width apart. " +
+                "Brace your core—as if you’re about to get punched in the gut—and squeeze your glutes. Maintain these contractions the entire exercise. " +
+                "Press the weights over head until your arms are straight and your biceps are by your ears. Your palms should face each other. This is the starting position. " +
+                "Without moving your upper arms, bend your elbows to lower the weights behind your head until your forearms are at least parallel to the floor. " +
+                "Pause, then straighten your arms to return to the starting position. ";
+        overheadTricepExtensionWhy = "Overhead tricep extension";
 
 
         mAdapter = new Exercise_Model_Recycler_Adapter(exercise_modelList);
@@ -156,6 +166,9 @@ public class Dumbbell_Activity extends AppCompatActivity {
         exercise_modelList.add(dumbbell);
 
         dumbbell = new Exercise_Model("Dumbbell Scaption", dumbbellScaptionHow, dumbbellScaptionWhy, R.drawable.dumbbell_scaption);
+        exercise_modelList.add(dumbbell);
+
+        dumbbell = new Exercise_Model("Overhead Tricep Extension", overheadTricepExtensionHow, overheadTricepExtensionWhy, R.drawable.kneeling_dumbbell_tricepsextension);
         exercise_modelList.add(dumbbell);
     }
 }
