@@ -17,6 +17,7 @@ import java.util.List;
 public class Exercise_Model_Video_Recycler_Adapter extends RecyclerView.Adapter<Exercise_Model_Video_Recycler_Adapter.MyViewHolder> {
 
     private List<Exercise_Model_Video> exercise_modelList_video;
+    private MediaController mediaController;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView vName;
@@ -31,6 +32,9 @@ public class Exercise_Model_Video_Recycler_Adapter extends RecyclerView.Adapter<
             vHow = view.findViewById(R.id.videoExerciseHow);
             vWhy = view.findViewById(R.id.videoExerciseWhy);
             vPlayer = view.findViewById(R.id.videoExerciseVideo);
+
+            mediaController = new MediaController(itemView.getContext());
+            mediaController.setAnchorView(vPlayer);
         }
     }
 
@@ -58,8 +62,7 @@ public class Exercise_Model_Video_Recycler_Adapter extends RecyclerView.Adapter<
         holder.vWhy.setText(exercise_model_video.getWhyDescription());
 
         //Video player
-        MediaController mediaController = new MediaController(holder.itemView.getContext());
-        mediaController.setAnchorView(holder.vPlayer);
+
         holder.vPlayer.setMediaController(mediaController);
         holder.vPlayer.setVideoPath(exercise_model_video.getVideoURL());
 //        holder.vURL.start();
